@@ -1,3 +1,7 @@
 #!/bin/bash
 
-find . -name *.tar.gz > doc/repository.list
+find . -name *SNAPSHOT*
+
+find . -name *SNAPSHOT* -print | xargs /bin/rm -rf
+
+chmod ugo+x docs -R
